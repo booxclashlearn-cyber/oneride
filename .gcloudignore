@@ -1,0 +1,14 @@
+# Only backend source and its build configuration are uploaded to Cloud Build.
+**
+!cloudbuild.yaml
+!kakoride/
+!kakoride/api/
+!kakoride/api/**
+kakoride/api/.env*
+kakoride/api/.data/**
+kakoride/api/.test-tmp/**
+kakoride/api/.pytest_cache/**
+kakoride/api/**/__pycache__/**
+kakoride/api/**/*.pyc
+kakoride/api/tests/**
+kakoride/api/.venv/**

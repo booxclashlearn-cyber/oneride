@@ -105,6 +105,7 @@ def create_app(settings=None, store=None, verifier=None):
         require(engine.driver(uid)["profile"]["role"] == "admin", "Administrator required", 403)
         return uid
 
+    @api.get("/livez")
     @api.get("/healthz")
     def health():
         return {"status": "ok"}
