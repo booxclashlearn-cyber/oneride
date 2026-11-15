@@ -1,0 +1,15 @@
+{
+  "name": "kakoride-workspace",
+  "version": "0.3.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev-kakoride.mjs",
+    "dev:web": "npm --prefix kakoride run dev",
+    "dev:api": "python -m uvicorn kakoride.api.app:app --host 127.0.0.1 --port 8080",
+    "worker": "python -m kakoride.api.worker",
+    "test": "node scripts/check-kakoride.mjs",
+    "test:api": "python -m pytest kakoride/api/tests -q",
+    "test:web": "npm --prefix kakoride test",
+    "build": "npm --prefix kakoride run build"
+  }
+}

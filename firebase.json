@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "kakoride/dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{"source": "**", "destination": "/index.html"}],
+    "headers": [{"source": "/index.html", "headers": [{"key": "Cache-Control", "value": "no-cache"}]}]
+  },
+  "firestore": {
+    "rules": "kakoride/firestore.rules",
+    "indexes": "kakoride/firestore.indexes.json"
+  },
+  "emulators": {
+    "firestore": {"host": "127.0.0.1", "port": 8189},
+    "singleProjectMode": true
+  }
+}
